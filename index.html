@@ -1,10 +1,279 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Sistema de Ingresos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Automatizado de Ingresos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--azul-marino: #0A2540;
+--dorado: #D4AF37;
+--blanco: #FFFFFF;
+--gris-claro: #f4f4f7;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+background-color: var(--blanco);
+color: var(--azul-marino);
+scroll-behavior: smooth;
+}
+
+.container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 60px 20px;
+text-align: center;
+}
+
+/* --- Hero Section --- */
+.hero {
+background-color: var(--azul-marino);
+color: var(--blanco);
+padding: 100px 20px;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 3rem;
+margin: 0 0 10px 0;
+font-weight: 700;
+}
+
+.hero h3 {
+font-size: 1.5rem;
+margin: 0 0 30px 0;
+font-weight: 300;
+color: var(--dorado);
+}
+
+.hero p {
+max-width: 600px;
+margin: 20px auto;
+line-height: 1.6;
+}
+
+.boton-principal {
+background-color: var(--dorado);
+color: var(--azul-marino);
+padding: 15px 35px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: 600;
+font-size: 1.1rem;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+display: inline-block;
+}
+
+.boton-principal:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- Cómo Funciona Section --- */
+.pasos-container {
+display: flex;
+justify-content: space-around;
+gap: 30px;
+margin-top: 50px;
+flex-wrap: wrap;
+}
+
+.paso {
+flex: 1;
+max-width: 300px;
+}
+
+.paso .icono {
+font-size: 3rem;
+color: var(--dorado);
+}
+
+/* --- Escalera de Ingresos Section --- */
+#escalera {
+background-color: var(--gris-claro);
+}
+
+.escalera-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin-top: 50px;
+text-align: left;
+}
+
+.escalon {
+background-color: var(--blanco);
+padding: 30px;
+border-radius: 10px;
+border: 1px solid #ddd;
+transition: transform 0.3s, box-shadow 0.3s;
+border-left: 5px solid var(--dorado);
+}
+
+.escalon:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.escalon h4 {
+margin: 0 0 10px 0;
+font-size: 1.2rem;
+color: var(--azul-marino);
+}
+
+.escalon .precio {
+font-size: 2.5rem;
+font-weight: 700;
+color: var(--dorado);
+margin-bottom: 15px;
+}
+
+/* --- Beneficios Section --- */
+.beneficios-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 40px;
+margin-top: 50px;
+text-align: left;
+}
+
+.beneficio .icono {
+font-size: 2.5rem;
+color: var(--dorado);
+margin-bottom: 10px;
+}
+
+/* --- Testimonios Section --- */
+#testimonios {
+background-color: var(--gris-claro);
+}
+
+.testimonio-placeholder {
+background-color: var(--blanco);
+padding: 30px;
+border-radius: 10px;
+margin: 20px auto;
+max-width: 700px;
+border-left: 5px solid var(--dorado);
+font-style: italic;
+}
+
+/* --- CTA Final --- */
+#cta {
+background-color: var(--azul-marino);
+color: var(--blanco);
+}
+
+#cta h2 {
+color: var(--blanco);
+}
+
+#cta p {
+max-width: 600px;
+margin: 0 auto 30px auto;
+}
+
+h2 {
+font-size: 2.5rem;
+font-weight: 600;
+margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.hero h1 { font-size: 2.5rem; }
+.hero h3 { font-size: 1.2rem; }
+h2 { font-size: 2rem; }
+.pasos-container { flex-direction: column; align-items: center; }
+}
+</style>
 </head>
 <body>
-    <h1>Bienvenido al Sistema de Ingresos</h1>
-    <p>Contenido del sistema de ingresos...</p>
+
+<header class="hero">
+<h1>Crea tu propio sistema automatizado de ingresos</h1>
+<h3>5 plantillas listas para usar y revender con 100% de comisión</h3>
+<p>Descubre el método exacto para generar ingresos pasivos vendiendo productos digitales de alta demanda. Te damos el sistema, las plantillas y el derecho de reventa. Tú te quedas con el 100% de las ganancias.</p>
+<a href="#cta" class="boton-principal">Empieza Ahora</a>
+<p style="font-size: 14px; margin-top: 10px;"><em>Sin necesidad de experiencia previa.</em></p>
+</header>
+
+<main>
+<section class="container">
+<h2>Un sistema tan simple como contar hasta 3</h2>
+<p>Olvídate de procesos complicados. Nuestro sistema está diseñado para que empieces a generar ingresos en tiempo récord.</p>
+<div class="pasos-container">
+<div class="paso">
+<div class="icono">📄</div>
+<h3>1. Obtienes tu Plantilla</h3>
+<p>Elige una de las 5 plantillas de nuestro sistema. Con tu compra, adquieres acceso inmediato y los derechos de reventa.</p>
+</div>
+<div class="paso">
+<div class="icono">🔗</div>
+<h3>2. Recibes el Link de Reventa</h3>
+<p>Automáticamente, se te entrega un enlace único para que puedas revender la misma plantilla que adquiriste.</p>
+</div>
+<div class="paso">
+<div class="icono">💰</div>
+<h3>3. Vendes y Ganas el 100%</h3>
+<p>Por cada venta realizada desde tu enlace, recibes el 100% de la comisión directamente en tu cuenta. Sin intermediarios.</p>
+</div>
+</div>
+</section>
+
+<section id="escalera" class="container">
+<h2>Tu Escalera Hacia la Libertad Financiera</h2>
+<p>Cada plantilla representa un nuevo nivel de ingresos potenciales. Comienza donde te sientas cómodo y escala a tu propio ritmo. Cada plantilla te da el derecho de revenderla y ganar el 100% de su valor, una y otra vez.</p>
+<div class="escalera-container">
+<div class="escalon"><h4>Plantilla 1: INICIO</h4><div class="precio">$40</div><p>El punto de partida ideal para capitalizarte.</p></div>
+<div class="escalon"><h4>Plantilla 2: ACELERADOR</h4><div class="precio">$80</div><p>Duplica tu potencial de ganancia.</p></div>
+<div class="escalon"><h4>Plantilla 3: PRO</h4><div class="precio">$160</div><p>Para quienes buscan resultados serios.</p></div>
+<div class="escalon"><h4>Plantilla 4: ÉLITE</h4><div class="precio">$360</div><p>Ingresos significativos y consistentes.</p></div>
+<div class="escalon"><h4>Plantilla 5: MAGNATE</h4><div class="precio">$720</div><p>El máximo nivel para maximizar tu facturación.</p></div>
+</div>
+</section>
+
+<section class="container">
+<h2>Todo lo que necesitas para triunfar</h2>
+<p>Este no es solo un producto, es un ecosistema completo diseñado para tu éxito.</p>
+<div class="beneficios-grid">
+<div class="beneficio"><div class="icono">💸</div><h3>100% de Comisión Directa</h3><p>Recibe el pago completo de cada venta directamente a tu cuenta, sin intermediarios ni esperas.</p></div>
+<div class="beneficio"><div class="icono">📋</div><h3>Sistema 'Copiar y Pegar'</h3><p>No necesitas crear nada. Te entregamos un sistema probado y listo para duplicar desde el primer día.</p></div>
+<div class="beneficio"><div class="icono">💻📱</div><h3>Libertad Total</h3><p>Gestiona tu negocio desde cualquier lugar del mundo. Solo necesitas tu móvil o una laptop y conexión a internet.</p></div>
+<div class="beneficio"><div class="icono">👥</div><h3>Comunidad y Soporte</h3><p>Nunca estarás solo. Accede a un grupo de emprendedores como tú para resolver dudas y compartir estrategias.</p></div>
+</div>
+</section>
+
+<section id="testimonios" class="container">
+<h2>Lo que dicen nuestros miembros</h2>
+<div class="testimonios-container">
+<div class="testimonio-placeholder">
+<p>"Aquí irá el testimonio de un cliente satisfecho. Resaltará la facilidad del sistema y los resultados obtenidos."</p>
+<strong>- Nombre Apellido | Plantilla PRO</strong>
+</div>
+<div class="testimonio-placeholder">
+<p>"Aquí irá el testimonio de un cliente satisfecho. Resaltará la facilidad del sistema y los resultados obtenidos."</p>
+<strong>- Nombre Apellido | Plantilla ÉLITE</strong>
+</div>
+</div>
+</section>
+
+<section id="cta" class="container">
+<h2>¿Listo para activar tu sistema de ingresos?</h2>
+<p>Da tu primer paso hoy. Elige tu plantilla, activa tu enlace y comienza a ganar. La inversión es única, las ganancias son ilimitadas.</p>
+<a href="#escalera" class="boton-principal">Obtener Plantilla Ahora</a>
+</section>
+</main>
+
+<footer style="text-align: center; padding: 20px; background-color: #0A2540; color: #fff;">
+<p>&copy; 2025 Tu Marca | Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
